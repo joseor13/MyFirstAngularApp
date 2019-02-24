@@ -1,0 +1,11 @@
+.man-app-grid {
+    display: grid;
+    grid-template-rows: 1fr 13fr 1fr;
+}
+.main-header, .main-footer {
+    background-color: aquamarine;
+}
+.main-content {
+    background-color: bisque;
+    grid-template-columns: 1fr 5fr 1fr;
+}
