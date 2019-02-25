@@ -1,11 +1,34 @@
 
 
-<div class="main-add-grid">
+<div class="main-app-grid">
     <div class="main-header">
         Header
     </div>
     <div class="main-content">
-        body
+        <table class="table">
+            <thead class="thead-dark">
+              <tr >
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">E-mail</th>
+                <th>
+                    <button (click)="addRow()"type="button" class="btn btn-success">+</button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of contacts; let i = index">
+                <th scope="row">{{row.ID}}</th>
+                <td>{{row.first_name}}</td>
+                <td>{{row.last_name}}</td>
+                <td>{{row.email}}</td>
+                <td>
+                    <button  (click)="delete(i)" type="button" class="btn btn-danger">X</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
     </div>
     <div class="main-footer">
         footer

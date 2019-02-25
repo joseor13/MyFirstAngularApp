@@ -1,6 +1,7 @@
-.man-app-grid {
+.main-app-grid {
     display: grid;
     grid-template-rows: 1fr 13fr 1fr;
+    height: 100%;
 }
 .main-header, .main-footer {
     background-color: aquamarine;
@@ -8,4 +9,6 @@
 .main-content {
     background-color: bisque;
     grid-template-columns: 1fr 5fr 1fr;
+    width: 90%;
+    margin: 0px auto;
 }
