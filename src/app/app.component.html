@@ -13,18 +13,30 @@
                 <th scope="col">Last Name</th>
                 <th scope="col">E-mail</th>
                 <th>
-                    <button (click)="addRow()"type="button" class="btn btn-success">+</button>
+                    <button (click)="addRow()" type="button" class="btn btn-info">+</button>
+                    
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let row of contacts; let i = index">
-                <th scope="row">{{row.ID}}</th>
-                <td>{{row.first_name}}</td>
-                <td>{{row.last_name}}</td>
-                <td>{{row.email}}</td>
+                <th scope="row">  
+                  <input [(ngModel)]= "row.ID" type="text" class="form-control" placeholder="ID" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </th>
                 <td>
-                    <button  (click)="delete(i)" type="button" class="btn btn-danger">X</button>
+                    <input [(ngModel)]= "row.first_name" type="text" class="form-control" placeholder="first_name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </td>
+                <td>
+                    <input [(ngModel)]= "row.last_name" type="text" class="form-control" placeholder="last_name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+               </td>
+                <td>
+                    <input [(ngModel)]= "row.email" type="text" class="form-control" placeholder="email" aria-label="Recipient's username" aria-describedby="basic-addon2">               
+              </td>
+                <td>
+                  <div class="btn-group">
+                      <button (click)="save(row)"type="button" class="btn btn-success">Save</button>
+                      <button (click)="delete(i)" type="button" class="btn btn-danger">X</button>
+                  </div>
                 </td>
               </tr>
             </tbody>

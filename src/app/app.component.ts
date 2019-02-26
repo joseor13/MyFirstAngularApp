@@ -35,12 +35,14 @@ export class AppComponent {
     this.contacts.splice(e, 1);
   }
   addRow() {
-    this.contacts.push({
+    this.contacts.push ({
       ID: 1,
       first_name: 'Jose',
       last_name: 'Rosales',
       email: 'joserosales@me.com'
-    }
-    )
+    });
+  }
+  save(row){
+    console.log('from save row: ', row);
   }
 }
